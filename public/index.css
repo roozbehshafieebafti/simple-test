@@ -16,3 +16,13 @@ body {
         background-color: white
     }
 }
+@keyframes shine {
+    0% {
+        background-color: red;
+        color: white;
+    }
+
+    100% {
+        color: unset;
+    }
+}
