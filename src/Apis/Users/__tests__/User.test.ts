@@ -5,12 +5,12 @@ jest.mock("../../APICall");
 
 describe("getUser function", () => {
   it("fetches successfully data from the API", async () => {
-    (apiCall as any).mockResolvedValue({ data: { info: { }, results: [{ }] } });
+    (apiCall as any).mockResolvedValue({ data: { info: {}, results: [{}] } });
 
     const result = await getUser();
 
     expect(apiCall).toHaveBeenCalledWith("/");
 
-    expect(result).toEqual({ info: { }, results: [{ }] });
+    expect(result).toEqual({ info: {}, results: [{}] });
   });
 });

@@ -7,7 +7,9 @@ describe("useApi hook", () => {
   it("should handle successful API call", async () => {
     mockAsyncFunction.mockResolvedValue("Mocked Response");
 
-    const { result, waitForNextUpdate } = renderHook(() => useApi(mockAsyncFunction));
+    const { result, waitForNextUpdate } = renderHook(() =>
+      useApi(mockAsyncFunction)
+    );
 
     expect(result.current.loading).toBe(false);
     expect(result.current.data).toBeUndefined();

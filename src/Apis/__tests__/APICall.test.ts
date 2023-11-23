@@ -9,7 +9,10 @@ describe("apiCall function", () => {
   });
 
   it("should make a successful GET request", async () => {
-    (axios as any).mockResolvedValue({ data: { example: "data" }, headers: {} });
+    (axios as any).mockResolvedValue({
+      data: { example: "data" },
+      headers: {},
+    });
 
     const response = await apiCall("/endpoint");
 
@@ -24,9 +27,17 @@ describe("apiCall function", () => {
   });
 
   it("should make a successful POST request", async () => {
-    (axios as any).mockResolvedValue({ data: { example: "data" }, headers: {} });
+    (axios as any).mockResolvedValue({
+      data: { example: "data" },
+      headers: {},
+    });
 
-    const response = await apiCall("/endpoint", "POST", { postData: "example" }, { Authorization: "Bearer token" });
+    const response = await apiCall(
+      "/endpoint",
+      "POST",
+      { postData: "example" },
+      { Authorization: "Bearer token" }
+    );
 
     expect(axios).toHaveBeenCalledWith({
       method: "POST",
@@ -37,5 +48,4 @@ describe("apiCall function", () => {
 
     expect(response).toEqual({ data: { example: "data" }, headers: {} });
   });
-
 });
