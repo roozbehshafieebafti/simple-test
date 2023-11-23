@@ -36,6 +36,7 @@ export const MemeorizedCell = memo(Cell);
 const useStyles = makeStyles(() => ({
   cell: {
     animation: "highlight 0.8s",
+    height: 70,
   },
   picture: {
     width: 60,
