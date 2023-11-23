@@ -4,8 +4,8 @@
         "es2021": true
     },
     "extends": [
+        "react-app",
         "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
         "plugin:react/recommended"
     ],
     "parser": "@typescript-eslint/parser",
@@ -13,12 +13,54 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": [
-        "@typescript-eslint",
-        "react"
-    ],
-    "rules": {
-        "react/jsx-uses-react": "off",
+    "plugins": ["react", "eslint-plugin-react-hooks", "eslint-plugin-react"],
+      "rules": {
+        "react/jsx-tag-spacing": ["warn"],
+        "react/self-closing-comp": [
+          "warn",
+          {
+            "component": true,
+            "html": true
+          }
+        ],
+        "key-spacing": "warn",
+        "semi-spacing": "warn",
+        "no-trailing-spaces": "warn",
+        "no-whitespace-before-property": "warn",
+        "object-curly-spacing": ["warn", "always"],
+        "array-bracket-spacing": ["warn", "never"],
+        "computed-property-spacing": ["warn", "never"],
+        "comma-spacing": ["warn", { "before": false, "after": true }],
+        "template-curly-spacing": ["warn", "never"],
+        "switch-colon-spacing": ["warn", { "before": false, "after": true }],
+        "space-in-parens": ["warn", "never"],
+        "no-multi-spaces": "warn",
+        "block-spacing": "warn",
+        "arrow-spacing": ["warn", { "before": true, "after": true }],
+        "keyword-spacing": ["warn", { "before": true, "after": true }],
+        "space-before-blocks": ["warn", "always"],
+        "space-before-function-paren": [
+          "warn",
+          {
+            "anonymous": "always",
+            "named": "never",
+            "asyncArrow": "always"
+          }
+        ],
+        "space-infix-ops": "warn",
+        "quote-props": ["warn", "as-needed", { "keywords": false }],
+        "no-lonely-if": "warn",
+        "max-depth": ["warn", 4],
+        "brace-style": ["warn", "1tbs"],
+        "curly": "warn",
+        "quotes": ["error", "double"],
+        "semi": ["warn", "always"],
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": ["error"],
+        "@typescript-eslint/no-explicit-any": "warn",
+        "import/no-default-export": "error",
+        "react/prop-types": "off",
+        "no-debugger": "warn",
         "react/react-in-jsx-scope": "off"
-    }
+      }
 }
