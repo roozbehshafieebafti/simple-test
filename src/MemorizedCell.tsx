@@ -15,7 +15,7 @@ const Cell: FC<{ content?: string; type: "text" | "image" }> = ({
   }, [content]);
 
   return (
-    <TableCell className={flag ? classes.cell : ""}>
+    <TableCell className={flag ? classes.cell : ""} data-testid="cell-td">
       {content ? (
         <>
           {type === "image" && (

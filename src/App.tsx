@@ -28,10 +28,11 @@ export const App: FC = () => {
         >
           <Typography variant="h5">Random User:</Typography>
           <Button
+            size="small"
             variant="contained"
             disabled={loading}
             onClick={() => userApi()}
-            size="small"
+            data-testid="refetch-button"
           >
             Refetch
           </Button>

@@ -16,7 +16,7 @@ export const UserTable: FC<{ user?: User }> = ({ user }) => {
   const classes = useStyles();
   const headers = ["First Name", "Last Name", "Country", "Picture"];
   return (
-    <Table size="medium" className={classes.table}>
+    <Table size="medium" className={classes.table} data-testid="user-table">
       <TableHead>
         <TableRow>
           {headers.map((item) => (
